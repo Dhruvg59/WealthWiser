@@ -1,0 +1,18 @@
+.banner {
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+  

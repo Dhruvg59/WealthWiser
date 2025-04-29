@@ -13,10 +13,13 @@ const Navbar = () => {
     <Link to="/" style={{ textDecoration: 'none' }}><span>Home</span></Link>
     <Link to="/calculator" style={{ textDecoration: 'none' }}><span>Calculator</span></Link>
     <Link to="/about" style={{ textDecoration: 'none' }}><span>About</span></Link>
-    <Link to="/contact" style={{ textDecoration: 'none' }}><span>Contact</span></Link>
+    <Link to="/contact" style={{ textDecoration: 'none' }}><span>Services</span></Link>
     </div>
 
-    <button className='contact-button'> Contact us </button>
+    <Link to="/contact" style={{ textDecoration: 'none' }}>
+  <button className='contact-button'>Contact us</button>
+</Link>
+
 
   </div>
   </>

@@ -1,0 +1,46 @@
+.service-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+  }
+  
+  .service-left {
+    flex: 1;
+  }
+  
+  .service-left h1 {
+    margin-bottom: 20px;
+  }
+  
+  .service-left ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .service-right {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .service-form input,
+  .service-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .service-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  

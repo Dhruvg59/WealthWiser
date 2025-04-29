@@ -12,6 +12,8 @@ import TestimonialCard from './Components/TestimonialCard';
 import TestimonialsSection from './Components/TestimonialsSection';
 import Footer from './Components/Footer';
 import Calculator from './pages/Calculator';
+import ServiceDetails from './pages/ServiceDetails';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -36,8 +38,32 @@ function App() {
     <TestimonialsSection />
             </>
           } />
-          <Route path="/card-loan" element={<CardLoan />} />
+          <Route path="/card-loan" element={
+    <ServiceDetails 
+      title="Card Loan"
+      description="Apply for easy credit card loans."
+      points={[
+        "Instant Approval",
+        "Low Interest Rate",
+        "Flexible Repayment"
+      ]}
+    />
+  } />
+
+  <Route path="/home-loan" element={
+    <ServiceDetails 
+      title="Home Loan"
+      description="Own your dream house today."
+      points={[
+        "Lowest Interest",
+        "Long Term Tenure",
+        "Minimal Paperwork"
+      ]}
+    />
+  } />
+          {/* <Route path="/card-loan" element={<CardLoan />} /> */}
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
       <Footer />

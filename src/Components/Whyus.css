@@ -1,14 +1,14 @@
 .why-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #f8f9fa;
     text-align: center;
     background-image: url("../Images/Office-meeting.avif");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     margin-top: 20px;
+    border-radius: 20px;
   }
   
   .why-section h2 {
@@ -31,8 +31,8 @@
     font-size: 18px;
     color: #1f1f1f;
     text-align: center;
-    width: 50%;
-    margin: 40px auto;
+    width: 60%;
+    margin: 60px auto;
     position: relative;
     z-index: 2;
     
@@ -46,16 +46,19 @@
     gap: 20px;
     position: relative;
     z-index: 2;
+    border-bottom: 2px solid transparent;
+    transition: border-color 1.5s ease;
+  }
+  .why-card:hover {
+    border-bottom: 4px solid #007bff;
   }
   
   .why-card {
     background: #ffffff;
-    padding: 20px 25px;
-    height: 150px;
+    padding: 20px 20px;
     border-radius: 12px;
     width: 200px;
     height: 200px;
-    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -67,8 +70,13 @@
   }
   
   .why-card p {
-    color: #666;
-    font-size: 15px;
+    color: #0f0e0e;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .bold-text{
+    color: rgb(31, 30, 30);
+    font-weight: bold;
   }
   
  
@@ -76,7 +84,7 @@
     width: 100%;
     margin-top: 15px;
   }
-
+/* 
   .why-card-button button {
     width: 100%;
     padding: 10px 20px;
@@ -99,10 +107,10 @@
 
   .why-card-button button svg {
     font-size: 14px;
-  }
+  } */
   
   .why-card-icon {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

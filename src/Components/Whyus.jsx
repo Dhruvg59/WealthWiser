@@ -13,31 +13,31 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 
 const features = [
   {
-    title: "Fast Approvals",
-    description: "We provide loan approvals within 24 hours with minimal documentation.",
+    title: "",
+    description: "Compare Choose And Apply Among 40+ Banks",
     image: image1,
     icon: <CiBank />,
   },
   {
-    title: "Flexible Repayment",
-    description: "Tailor your loan terms to suit your needs and pay at your own pace.",
+    title: "",
+    description: "100% Paper Less Process",
     image: image2,
     icon: <AiOutlineCloudUpload />,
     
   },
   {
-    title: "Low Interest Rates",
-    description: "Our competitive rates help you save more while getting what you need.",
+    title: "",
+    description: "Simple & Secure Process",
     icon: <RiSecurePaymentFill />,
   },
   {
-    title: "24/7 Support",
-    description: "Got questions? Our experts are always just a call or chat away.",
+    title: "",
+    description: "Easy Debt Consolidation Up to Rs 1 Crore.",
     icon: <TbReportMoney />,
   },
   {
-    title: "24/7 Support",
-    description: "Got questions? Our experts are always just a call or chat away.",
+    title: "",
+    description: "Experienced Loan Profession.",
     icon: <FaFileSignature />,
   },
 ];
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
       
       <div className='why-section-content'>
       <h2>Why You Should Choose Us</h2>
-        <p>Wealthwise is a cutting-edge platform designed to simplify your loan journey. We connect you with the best loan solutions, offering unmatched deals tailored to your unique needs. With Wealthwise, accessing funds is not just easy—it’s smart, seamless, and secure.</p>
+        <p><span className='bold-text'>Wealthwise</span> is a cutting-edge platform designed to simplify your loan journey. We connect you with the best loan solutions, offering unmatched deals tailored to your unique needs. With Wealthwise, accessing funds is not just easy—it’s smart, seamless, and secure.</p>
         </div>
       
       <div className="why-cards">
@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
               {item.icon}
             </div>
             <div className='why-card-content'>
-              <h3>{item.title}</h3>
+              {/* <h3>{item.title}</h3> */}
               <p>{item.description}</p>
             </div>
          

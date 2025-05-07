@@ -1,21 +1,24 @@
 .service-details-container {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
-    gap: 30px;
+    padding: 0px;
+    gap: 0px;
   }
   
   .service-left {
     flex: 1;
+    background-color: #65a8f0;
+    
   }
   
   .service-left h1 {
-    margin-bottom: 20px;
+    margin: 20px 40px;
   }
   
   .service-left ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin: 20px 40px;
   }
   
   .service-right {
@@ -43,4 +46,30 @@
     border-radius: 6px;
     cursor: pointer;
   }
+
+
+  .service-extra-details {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+  
+  .service-extra-details h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .service-extra-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .service-extra-details li {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
   

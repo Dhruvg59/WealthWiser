@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './InfoSection.css';
+import LoanImage from '../Images/Loan.webp';
+
 
 const dropdownData = [
   {
@@ -30,7 +32,7 @@ const InfoSection = () => {
   return (
     <div className="info-section">
       <div className="info-image">
-        <img src="/car-info.jpg" alt="Car Loan Info" />
+        <img src={LoanImage} alt="Car Loan Info" />
       </div>
       <div className="info-dropdowns">
         {dropdownData.map((item, index) => (

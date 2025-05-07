@@ -1,5 +1,6 @@
 .carousel-wrapper {
     overflow: hidden;
+    padding-top: 10px;
     width: 100%;
     background-color: #fff;
   }
@@ -15,10 +16,10 @@
   }
   
   .carousel-img {
-    width: 250px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 0 10px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
   }
   

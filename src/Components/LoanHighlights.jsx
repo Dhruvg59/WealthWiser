@@ -22,7 +22,7 @@ const LoanHighlights = () => {
     {
       title: 'Overdraft For Self-Employed',
       points: ['High loan limits', 'Custom solutions'],
-      Path: '/card-loan',
+      Path: '/selfemployed-loan',
       image: image2,
     },
     {

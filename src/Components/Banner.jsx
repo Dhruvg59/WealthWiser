@@ -6,11 +6,18 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './Banner.css';
 
+// Import local images
+import Banner1 from '../Images/Banner-1.avif';
+import Banner2 from '../Images/Banner-2.avif';
+import Banner3 from '../Images/Banner-3.avif';
+import Banner4 from '../Images/Banner-4.jpg';
+
 const Banner = () => {
   const images = [
-    "https://img.freepik.com/premium-vector/bank-loan-successfully-illustration-concept-white-background_701961-3161.jpg?w=2000",
-    "https://cms-resources.groww.in/uploads/How_to_Get_Personal_Loan_b9b945880a.jpg",
-    "https://img.freepik.com/premium-vector/bank-loan-successfully-illustration-concept-white-background_701961-3161.jpg?w=2000"
+    Banner1,
+    Banner2,
+    Banner3,
+    Banner4
   ];
 
   return (
@@ -25,7 +32,7 @@ const Banner = () => {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <img className="banner-img" src={src} alt={`Slide ${index}`} />
+            <img className="banner-img" src={src} alt={`Banner ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>

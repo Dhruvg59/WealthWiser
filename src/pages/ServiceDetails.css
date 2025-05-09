@@ -1,75 +1,173 @@
 .service-details-container {
     display: flex;
     justify-content: space-between;
-    padding: 0px;
-    gap: 0px;
-  }
-  
-  .service-left {
+    padding: 40px 80px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.service-left {
     flex: 1;
-    background-color: #65a8f0;
-    
-  }
-  
-  .service-left h1 {
-    margin: 20px 40px;
-  }
-  
-  .service-left ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 20px 40px;
-  }
-  
-  .service-right {
-    flex: 1;
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .service-form input,
-  .service-form textarea {
-    width: 100%;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-left h1 {
+    margin: 0 0 20px 0;
+    color: #1a365d;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.service-left ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.service-left ul li {
+    position: relative;
+    padding-left: 30px;
     margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  .service-form button {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.service-left ul li:before {
+    content: "•";
+    color: #3182ce;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.service-right {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-right h2 {
+    color: #1a365d;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.service-form input {
     width: 100%;
-    padding: 12px;
-    background-color: #007bff;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.service-form input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.service-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3182ce;
     color: white;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-
-  .service-extra-details {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f2f2f2;
     border-radius: 8px;
-  }
-  
-  .service-extra-details h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .service-extra-details ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.service-form button:hover {
+    background-color: #2c5282;
+}
+
+.service-extra-details {
+    margin: 40px 80px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.extra-section {
+    margin-bottom: 40px;
+}
+
+.extra-section h2 {
+    color: #3182ce;
+    font-size: 1.8rem;
     margin-bottom: 20px;
-  }
-  
-  .service-extra-details li {
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.extra-section p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.extra-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.extra-section ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #2d3748;
+    line-height: 1.5;
+}
+
+.extra-section ul li:before {
+    content: "•";
+    color: #3182ce;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.extra-section ul ul {
+    margin: 10px 0 10px 20px;
+}
+
+.extra-section ul ul li {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.extra-section ul ul li:before {
+    content: "◦";
+    color: #63b3ed;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
   

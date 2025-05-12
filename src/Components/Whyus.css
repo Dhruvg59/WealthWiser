@@ -1,120 +1,93 @@
 .why-section {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-    background-image: url("../Images/Office-meeting.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-top: 20px;
-    border-radius: 20px;
-  }
-  
-  .why-section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #1f1f1f;
-  }
-  
-  .opacity{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Black color, 50% transparent */
-    z-index: 1;
-    backdrop-filter: blur(2px);
-  }
-  .why-section-content {
-    font-size: 18px;
-    color: #1f1f1f;
-    text-align: center;
-    width: 60%;
-    margin: 60px auto;
-    position: relative;
-    z-index: 2;
-    
-    
-  }
-  
-  .why-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
-    border-bottom: 2px solid transparent;
-    transition: border-color 1.5s ease;
-  }
-  .why-card:hover {
-    border-bottom: 4px solid #007bff;
-  }
-  
-  .why-card {
-    background: #ffffff;
-    padding: 20px 20px;
-    border-radius: 12px;
-    width: 200px;
-    height: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  
-  
-  .why-card h3 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .why-card p {
-    color: #0f0e0e;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .bold-text{
-    color: rgb(31, 30, 30);
-    font-weight: bold;
-  }
-  
- 
-  .why-card-button{
-    width: 100%;
-    margin-top: 15px;
-  }
-/* 
-  .why-card-button button {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background-color 0.3s ease;
-  }
+  padding: 100px 20px;
+  background-image: url("../Images/Office-meeting.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 20px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
 
-  .why-card-button button:hover {
-    background-color: #1e40af;
-  }
+.opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Stronger contrast */
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
 
-  .why-card-button button svg {
-    font-size: 14px;
-  } */
-  
-  .why-card-icon {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px; /* or adjust */
-    color: #007bff; /* theme color */
-  }
+.why-section-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  color: #f4f4f4;
+}
+
+.why-section-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.why-section-content p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.bold-text {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  z-index: 2;
+  position: relative;
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  width: 220px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.why-card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #3182ce;
+}
+
+.why-card-content p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0;
+}
+
   

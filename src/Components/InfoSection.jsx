@@ -1,24 +1,41 @@
+
 import React, { useState } from 'react';
 import './InfoSection.css';
 import LoanImage from '../Images/Loan.webp';
 
-
 const dropdownData = [
   {
-    title: 'Loan Eligibility',
-    content: 'You must be 21 years old with a stable income source and a good credit score.',
+    title: 'Apply',
+    content: 'At this stage, you will need to fill in your details on the ‘Apply Now’ page and we will get in touch with you at the earliest',
   },
   {
-    title: 'Required Documents',
-    content: 'ID proof, address proof, salary slips, and bank statements are mandatory.',
+    title: 'Check Eligibilty',
+    content: 'Our experts will analyse your loan requirement over the WhatsApp Chat. We will need the below information to recommend the most suitable loan product with the lowest interest rate:',
+    points: [
+      'Mode of employment, years of work experience, Company you work for',
+      'Your current income',
+      'City of Employment & Current obligations (Any existing EMI’s being paid, credit card outstanding)',
+    ],
   },
   {
-    title: 'Interest Rates',
-    content: 'Interest rates vary from 7% to 14% depending on credit profile.',
+    title: 'Document Collection',
+    content: 'Our process is entirely digital, ensuring convenience and efficiency. Simply email us the following documents, and our team will take care of the rest:',
+    points: [
+      'KYC documents (ID & Residence proof)',
+      'Income documents',
+    ],
   },
   {
-    title: 'Repayment Options',
-    content: 'Flexible monthly EMIs available for up to 60 months.',
+    title: 'Loan Processing',
+    content: 'We will assist you in processing the loan application online and ensure compliance with all bank formalities seamlessly.',
+  },
+  {
+    title: 'Loan Approval',
+    content: 'The bank will approve your loan application post submission and verification of your documents',
+  },
+  {
+    title: 'Disbursement',
+    content: 'Amount will be credited to your bank account after submission of post-sanction documents.',
   },
 ];
 
@@ -44,7 +61,16 @@ const InfoSection = () => {
               {item.title}
             </div>
             {openIndex === index && (
-              <div className="dropdown-content">{item.content}</div>
+              <div className="dropdown-content">
+                <p>{item.content}</p>
+                {item.points && (
+                  <ul>
+                    {item.points.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             )}
           </div>
         ))}
@@ -54,3 +80,4 @@ const InfoSection = () => {
 };
 
 export default InfoSection;
+

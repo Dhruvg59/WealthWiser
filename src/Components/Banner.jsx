@@ -27,8 +27,8 @@ const Banner = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop={true}
-        spaceBetween={50}
-        slidesPerView={2}
+        
+        slidesPerView={1}
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

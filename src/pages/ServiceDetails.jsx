@@ -89,6 +89,10 @@ const ServiceDetails = ({ title, description, points ,image, extraDetails }) => 
             />
           <input type="text"
            placeholder="Mobile No." />
+           <input type="text" 
+           placeholder='Net-Income' />
+           <input type="text"
+           placeholder='Loan Amount' />
           <input type="text"
            placeholder='Loan-Type' />
           <button type="submit">Apply Now</button>

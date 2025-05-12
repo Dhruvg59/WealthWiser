@@ -80,7 +80,42 @@ const LoanHighlights = () => {
           <span className="word-choose">Choose </span>
           <span className="word-us">Us</span>
         </h2>
+
         <div className="loan-grid">
+  {boxItems.map((item, index) => (
+    <div 
+      key={index} 
+      className="loan-box"
+      onClick={() => handleCardClick(item.Path)}
+      style={{ cursor: item.Path ? 'pointer' : 'default' }}
+    >
+      {item.image && (
+        <div className='loan-box-img'>
+          <img src={item.image} alt={item.title} />
+        </div>
+      )}
+
+      {/* Title now outside content */}
+      <h3 className="loan-box-title">{item.title}</h3>
+
+      <div className='loan-box-content'>
+        <ul className="loan-points">
+          {item.points.map((point, i) => (
+            <li key={i} className="loan-point">• {point}</li>
+          ))}
+        </ul>
+      </div>
+
+      {item.Path && (
+        <div className='loan-box-button'>
+          <button>Apply Now <FaArrowRight /></button>
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
+        {/* <div className="loan-grid">
           {boxItems.map((item, index) => (
             <div 
               key={index} 
@@ -108,7 +143,7 @@ const LoanHighlights = () => {
               )}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

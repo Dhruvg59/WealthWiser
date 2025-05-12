@@ -15,7 +15,18 @@ import Calculator from './pages/Calculator';
 import ServiceDetails from './pages/ServiceDetails';
 import ContactUs from './pages/ContactUs';
 import AdminDashboard from './pages/Admin';
-import hdfc from"./Images/Hdfc.png";
+import FloatingLogo from './Components/FloatingLogo';
+import BuisnessLoan from "./Images/buisnessloan.jpg"
+import Salary from "./Images/salary.jpg"
+import Selfemployed from "./Images/selfemployed.jpg"
+import Propertyloan from "./Images/Propertyloan.jpg"
+import PersonalLoan from "./Images/Personal loan.jpg"
+import Buisness from "./Images/bloan1.jpg"
+import HomeLoan from "./Images/homeloan.jpg"
+import CarLoan from "./Images/carlaon.jpg"
+import ScrollToTop from './Components/ScroolToTop';
+import AboutUs from './pages/AboutUs';
+import Service from "./pages/Service"
 
 
 function App() {
@@ -23,7 +34,9 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
+        <ScrollToTop/>
         <Routes>
+          
           <Route path="/" element={
             <>
               <Banner />
@@ -45,7 +58,7 @@ function App() {
       <ServiceDetails 
        title=" MSME LOAN"
       //  description="Apply for easy credit card loans."
-       image={hdfc}
+       image={BuisnessLoan}
        points={[
         "Loan amount of up to 5 Crore",
         "Attractive Interest rates starting @ 9.50%",
@@ -62,7 +75,7 @@ function App() {
             "Affordable Interest Rates: Benefit from competitive interest rates, designed to reduce the cost of borrowing for small and medium businesses.",
             "Minimal Documentation: Submit just the necessary documents, such as business registration, financial statements, and KYC, for a hassle-free application.",
             "Boost Business Growth: Use the loan for expansion, equipment purchase, working capital, or any business need to fuel your growth.",
-            "Support for All MSMEs: Whether you’re a start-up or an established MSME, we offer solutions to meet your unique business needs."],
+            "Support for All MSMEs: Whether you're a start-up or an established MSME, we offer solutions to meet your unique business needs."],
             paragraphPosition:"after",
             paragraph:"G7loans offers MSME loans that provide flexible, fast, and affordable financing to help your business grow without the complexity of traditional lending."
         },
@@ -106,7 +119,7 @@ function App() {
       <ServiceDetails 
        title="Card Loan"
        description="Apply for easy credit card loans."
-       image={hdfc}
+       image={Salary}
        points={[
         "Instant Approval",
         "Low Interest Rate",
@@ -133,11 +146,11 @@ function App() {
     <ServiceDetails 
       title="OVERDRAFT FOR SELF EMPLOYED"
       description="Own your dream house today."
-      image="/Images/Hdfc.png"
+      image={Selfemployed}
       points={[
         "Flexible Credit Oppurtunity Up to1 Crore",
         "Pay Interest Part only for what you utilize",
-        "No EMI’s if no amount utilizes",
+        "No EMI's if no amount utilizes",
         "Withdraw Money When you need"
       ]}
       extraDetails={[
@@ -171,7 +184,7 @@ function App() {
     <ServiceDetails 
       title="PERSONAL LOAN"
       // description="Own your dream house today."
-      image="/Images/Hdfc.png"
+      image={PersonalLoan}
       points={[
         "Loan amount of up to 1 Crore",
         "Attractive Interest rates starting @ 9%",
@@ -188,7 +201,7 @@ function App() {
              "Quick Online Processing: Apply, get approved, and receive funds swiftly with our fully digital application process.",
              "Minimal Documentation: Submit only the essential documents like ID proof, income details, and bank statements.",
              "Instant Approval: Receive an instant loan decision and fast disbursal to meet your urgent needs.",
-             "Versatile Loan Use: Use the funds for any personal need—whether it’s for education, travel, medical expenses, or home improvement."],
+             "Versatile Loan Use: Use the funds for any personal need—whether it's for education, travel, medical expenses, or home improvement."],
           paragraphPosition: "after",
           paragraph:"With G7loans, getting a personal loan is easy, quick, and hassle-free!"
         },
@@ -214,7 +227,7 @@ function App() {
       <ServiceDetails 
        title="Loan Against property" 
        description="Apply for easy credit card loans."
-       image={hdfc}
+       image={Propertyloan}
        points={[
         "Loan amount of up to 75 Crore",
         "Attractive Interest rates starting @ 9%",
@@ -224,13 +237,13 @@ function App() {
       extraDetails={[
         {
           heading: "Loan Against Property Features",
-          bullets: ["Flexible Loan Amounts: Borrow up to 80% of your property’s market value, with amounts tailored to your needs.",
+          bullets: ["Flexible Loan Amounts: Borrow up to 80% of your property's market value, with amounts tailored to your needs.",
              "Competitive Interest Rates: Enjoy affordable interest rates that keep your loan costs manageable and predictable. ",
              "Long Repayment Tenure: Choose from flexible repayment terms ranging from 5 years to 25 years, based on your financial comfort",
              "Quick Processing & Disbursal: Fast approval and quick disbursal, allowing you to access funds when you need them most.",
              "No Hidden Fees: Clear, upfront loan terms with no unexpected charges or surprises",
              "Low Documentation: Simple paperwork, requiring only essential documents such as property papers, ID, and income proof.",
-             "Unsecured Loan Option: While the loan is secured by property, there’s no need for additional guarantees or complex paperwork.",
+             "Unsecured Loan Option: While the loan is secured by property, there's no need for additional guarantees or complex paperwork.",
              "Use Funds for Any Purpose: Whether for business expansion, education, or personal needs, the loan is flexible to suit various purposes."],
 
              paragraphPosition:"after",
@@ -299,7 +312,7 @@ function App() {
       <ServiceDetails 
        title="BUSINESS LOAN"
       //  description="Apply for easy credit card loans."
-       image={hdfc}
+       image={Buisness}
        points={[
         "Loan amount of up to 2 Crore",
         "Attractive Interest rates starting @ 10%",
@@ -334,7 +347,7 @@ function App() {
       <ServiceDetails 
        title="HOME LOAN"
       //  description="Apply for easy credit card loans."
-       image={hdfc}
+       image={HomeLoan}
        points={[
         "Loan amount of up to 25 Crore",
         "Attractive Interest rates starting @ 8.40%",
@@ -344,7 +357,7 @@ function App() {
       extraDetails={[
         {
           heading: "Home Loan Features",
-          bullets: ["Customizable Loan Amount: Borrow amounts based on your home’s value, ranging from ₹5 Lakhs to ₹25 Crore, based on eligibility.",
+          bullets: ["Customizable Loan Amount: Borrow amounts based on your home's value, ranging from ₹5 Lakhs to ₹25 Crore, based on eligibility.",
               "Attractive Interest Rates: Benefit from competitive rates, ensuring affordable monthly payments and lower overall costs.",
               "Flexible Tenure Options: Choose a repayment period that fits your budget, from 10 years to 30 years",
               "No Hidden Charges: Transparent loan terms with no surprise fees or hidden costs throughout the process.",
@@ -417,7 +430,7 @@ function App() {
       <ServiceDetails 
        title="CAR LOAN"
       //  description="Apply for easy credit card loans."
-       image={hdfc}
+       image={CarLoan}
        points={[
         "Loan amount of up to 100% ON Road Funding",
         "New Car Interest rates starting @ 9.10%",
@@ -439,7 +452,7 @@ function App() {
           },
         {
           heading: "Used Car Loan Features",
-          bullets: ["Flexible Loan Amount: Borrow up to 80% of the car's market value for pre-owned cars, depending on the car’s condition and your eligibility.",
+          bullets: ["Flexible Loan Amount: Borrow up to 80% of the car's market value for pre-owned cars, depending on the car's condition and your eligibility.",
              "Low Interest Rates: Affordable interest rates that make financing your used car easy and cost-effective.",
              "Quick & Simple Approval: Fast approval process with minimal paperwork, ensuring you get your loan quickly.",
              "Customizable Tenure: Choose from repayment periods of 12 months to 5 years, tailored to your budget.",
@@ -456,12 +469,15 @@ function App() {
 
   
           {/* <Route path="/card-loan" element={<CardLoan />} /> */}
+          <Route path="/about" element={<AboutUs/>} />
+          <Route path="/service" element={<Service/>} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
+        <Footer />
+        <FloatingLogo />
       </div>
-      <Footer />
     </Router>
     
 

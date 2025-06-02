@@ -36,7 +36,7 @@ const ContactUs = () => {
 
       console.log('Submitting form data:', formData);
       
-      const response = await fetch('http://localhost:5000/api/form', {
+      const response = await fetch('https://wealthwiser.onrender.com/api/form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

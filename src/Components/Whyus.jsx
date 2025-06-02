@@ -48,23 +48,26 @@ const WhyChooseUs = () => {
       <div className='opacity'></div>
       
       <div className='why-section-content'>
-      <h2>Why You Should Choose Us</h2>
+      <h2>Why <span className="blue-text">Wealthwise</span></h2>
         <p><span className='bold-text'>Wealthwise</span> is a cutting-edge platform designed to simplify your loan journey. We connect you with the best loan solutions, offering unmatched deals tailored to your unique needs. With Wealthwise, accessing funds is not just easy—it’s smart, seamless, and secure.</p>
         </div>
       
       <div className="why-cards">
-        {features.map((item, index) => (
-          <div key={index} className="why-card">
-            <div className='why-card-icon'>
-              {item.icon}
-            </div>
-            <div className='why-card-content'>
-              {/* <h3>{item.title}</h3> */}
-              <p>{item.description}</p>
-            </div>
-         
-          </div>
-        ))}
+      {features.map((item, index) => {
+  // Hide the 5th card on small screens using a CSS class
+  const isHiddenOnMobile = index === 4 ? "hide-on-mobile" : "";
+  return (
+    <div key={index} className={`why-card ${isHiddenOnMobile}`}>
+      <div className="why-card-icon">
+        {item.icon}
+      </div>
+      <div className="why-card-content">
+        <p>{item.description}</p>
+      </div>
+    </div>
+  );
+})}
+
       </div>
     </section>
   );

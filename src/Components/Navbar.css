@@ -105,5 +105,135 @@
   box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
 }
 
+.hamburger {
+  display: none;
+}
+/* ------------------------- MOBILE (<768px) ------------------------- */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    position: relative;
+  }
 
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  .navitems {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .navitems.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 16px 0;
+  }
+
+  .navitems span {
+    font-size: 16px;
+    padding: 10px 0;
+    color: #333;
+  }
+
+  .contact-button {
+    margin-top: 16px;
+    align-self: center;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    width: fit-content;
+  }
+}
+
+/* ------------------------- TABLET (768px - 1024px) ------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    position: relative;
+  }
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .contact-button {
+    order: 2;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    order: 3;
+    display: block;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navitems {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-in-out;
+    z-index: 999;
+    padding: 0;
+  }
+
+  .navitems.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 16px 0;
+  }
+
+  .navitems span {
+    font-size: 16px;
+    padding: 10px 0;
+    color: #333;
+  }
+}
+
+/* ------------------------- HAMBURGER BASE (Hide on desktop) ------------------------- */
 

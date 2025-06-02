@@ -9,6 +9,7 @@ import image4 from '../Images/working-4.avif';
 import image5 from '../Images/working-5.avif';
 import image6 from '../Images/working-6.jpg';
 import image7 from '../Images/working-7.avif';
+import image8 from '../Images/rupixen-5lw6CLBZlCg-unsplash.jpg';
 
 const LoanHighlights = () => {
   const navigate = useNavigate();
@@ -45,22 +46,30 @@ const LoanHighlights = () => {
     },
     {
       title: 'MSME Loan',
-      points: ['Transparent pricing', 'No early penalties'],
+      points: ['Hassle free application process', 'Flexible repayment options'],
       Path: '/msme-loan',
       image: image6,
     },
      {
       title: 'Home Loan',
-      points: ['Transparent pricing', 'No early penalties'],
+      points: ['Loan amount of up to 25 Crore', 'Tenure up to 30 years'],
       Path: '/home-loan',
       image: image3,
     },
     {
       title: 'Car Loan',
-      points: ['Transparent pricing', 'No early penalties'],
+      points: ['New Car Interest rates starting @ 9.10%', 'Tenure up to 84 months'],
       Path: '/car-loan',
       image: image7,
     },
+
+    {
+      title: 'Private Funding',
+      points: ['Loan amount available up to ₹100 Crore', 'No Collateral Required'],
+      Path: '/private-funding',
+      image: image8,
+    },
+    
     
     
   ];
@@ -76,9 +85,9 @@ const LoanHighlights = () => {
       <div className="loan-container">
         <p className="loan-subtitle">What we are offering</p>
         <h2 className="loan-title">
-          <span className="word-why">Why </span>
-          <span className="word-choose">Choose </span>
-          <span className="word-us">Us</span>
+          <span className="word-why"> </span>
+          <span className="word-our">Our </span>
+          <span className="word-products">Products</span>
         </h2>
 
         <div className="loan-grid">
@@ -101,7 +110,7 @@ const LoanHighlights = () => {
       <div className='loan-box-content'>
         <ul className="loan-points">
           {item.points.map((point, i) => (
-            <li key={i} className="loan-point">• {point}</li>
+            <li key={i} className="loan-point">{point}</li>
           ))}
         </ul>
       </div>

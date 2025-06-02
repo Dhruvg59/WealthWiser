@@ -1,6 +1,7 @@
 // TestimonialCard.jsx
 import React from 'react';
 import styled from 'styled-components';
+import { FaUserCircle } from 'react-icons/fa';
 
 
 const Card = styled.div`
@@ -13,13 +14,12 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 `;
 
-const Avatar = styled.img`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
+const UserIcon = styled(FaUserCircle)`
+  font-size: 80px;
+  color: #4a5568;
   margin-bottom: 1rem;
 `;
 
@@ -48,7 +48,7 @@ const Stars = styled.div`
 const TestimonialCard = ({ avatar, name, title, quote, rating = 5 }) => {
   return (
     <Card>
-      <Avatar src={avatar} alt={`${name}'s avatar`} />
+      <UserIcon />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Quote>"{quote}"</Quote>

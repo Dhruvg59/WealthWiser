@@ -1,69 +1,123 @@
 .emi-calculator-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: #f4f7fb;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #f8f9fa;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #2d3748;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.emi-calculator {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.emi-calculator h2 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.emi-input-group {
+  margin-bottom: 20px;
+}
+
+.emi-input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.emi-input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.emi-input-group input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.emi-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3182ce;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.emi-button:hover {
+  background-color: #2c5282;
+}
+
+.emi-result {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #1a365d;
+  text-align: center;
+}
+
+.emi-chart-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .emi-calculator-container {
+    flex-direction: column;
+    padding: 40px 30px;
   }
-  
-  .emi-calculator {
-    flex: 1;
-    max-width: 600px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 2rem;
+
+  .emi-calculator,
+  .emi-chart-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
   }
-  
+}
+
+@media screen and (max-width: 600px) {
   .emi-calculator h2 {
     font-size: 2rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
   }
-  
-  .emi-input-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  .emi-input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #555;
-  }
-  
-  .emi-input-group input {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-top: 0.5rem;
-  }
-  
-  .emi-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #007bff;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .emi-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .emi-result {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    color: #333;
-    text-align: center;
-  }
-  
 
+  .emi-input-group input {
+    font-size: 1rem;
+  }
+
+  .emi-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .emi-result {
+    font-size: 1.1rem;
+  }
+}

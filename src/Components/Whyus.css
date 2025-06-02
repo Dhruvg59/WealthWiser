@@ -10,6 +10,7 @@
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+
 .opacity {
   position: absolute;
   top: 0;
@@ -55,6 +56,13 @@
   gap: 24px;
   z-index: 2;
   position: relative;
+
+
+  
+}
+/* Default: show all cards */
+.hide-on-mobile {
+  display: block;
 }
 
 .why-card {
@@ -90,4 +98,42 @@
   margin: 0;
 }
 
-  
+@media (max-width: 768px) {
+  .why-section-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .why-section-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .why-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .why-card {
+    max-width: 160px;
+    padding: 14px 10px;
+    min-height: 150px;
+  }
+
+  .why-card-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .why-card-content p {
+    font-size: 0.75rem;
+  }
+
+  .why-card:nth-child(5) {
+    display: none;
+  }
+}

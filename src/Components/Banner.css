@@ -1,36 +1,60 @@
+/* Wrapper for the full screen or limited-height banner */
+.slider-wrapper {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
 
+/* Track for sliding images */
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
 
-
-   .banner {
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Individual slide */
+.slide-image {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover; /* Full cover for desktop */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* ===== Tablet View ===== */
+@media screen and (max-width: 1024px) {
+  .slider-wrapper {
+    height: auto; /* Allow height based on image aspect ratio */
   }
-  
-  .swiper {
-    width: 100%;
-    height: 400px; /* or however tall you want the banner */
+
+  .slide-image {
+    min-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Keeps all images same height ratio */
   }
-  
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .slide-img-tag {
+    width: 100%;
     height: 100%;
-    width: 100%;
+    object-fit: contain; /* Show full image */
   }
-  
-  .swiper-slide .banner-img {
+}
+
+/* ===== Mobile View ===== */
+@media screen and (max-width: 600px) {
+  .slider-wrapper {
+    height: auto;
+  }
+
+  .slide-image {
+    min-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Ensures all same size */
+  }
+
+  .slide-img-tag {
     width: 100%;
     height: 100%;
-    
-    background-color: #000;/* show the whole image */
-    
+    object-fit: contain; /* Show full image without cropping */
   }
-
-
-  
-  
+}

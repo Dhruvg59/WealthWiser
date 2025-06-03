@@ -10,32 +10,21 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);
 
-    try {
-      const response = await axios.post('https://wealthwiser.onrender.com/api/admin/login', {
-        email,
-        password
-      });
-
-      if (response.data.success) {
-        // Store credentials for verification
-        
-        localStorage.setItem('token', response.data.token);
-        
-
-        navigate('/admin/dashboard');
-      } else {
-        setError('Invalid credentials');
-      }
-    } catch (err) {
-      setError('Login failed. Please try again.');
-    } finally {
-      setLoading(false);
+    // Simple validation
+    if (email === 'admin@gmail.com' && password === 'admin123') {
+      // Store a simple token
+      localStorage.setItem('token', 'admin-token');
+      // Redirect to dashboard
+      navigate('/admin/dashboard');
+    } else {
+      setError('Invalid email or password');
     }
+    setLoading(false);
   };
 
   return (
@@ -61,7 +50,7 @@ const AdminLogin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="admin-form-input"
-              placeholder="peter@email.com"
+              placeholder="admin@gmail.com"
               required
             />
           </div>
@@ -84,14 +73,7 @@ const AdminLogin = () => {
             disabled={loading}
             className="admin-login-button"
           >
-            {loading ? (
-              <span className="flex items-center justify-center">
-                <div className="admin-loading-spinner"></div>
-                Signing in...
-              </span>
-            ) : (
-              'Sign In'
-            )}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 

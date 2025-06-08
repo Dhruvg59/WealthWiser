@@ -51,8 +51,18 @@ router.post('/', async (req, res) => {
 //   }
 // });
 router.get('/all', verifyToken, async (req, res) => {
-  const forms = await FormData.find().sort({ createdAt: -1 });
-  res.json(forms);
+  try {
+    console.log('Fetching all form submissions');
+    const submissions = await FormData.find().sort({ createdAt: -1 });
+    console.log(`Found ${submissions.length} submissions`);
+    res.json(submissions);
+  } catch (error) {
+    console.error('Error fetching submissions:', error);
+    res.status(500).json({ 
+      message: 'Error fetching submissions',
+      error: error.message 
+    });
+  }
 });
 
 

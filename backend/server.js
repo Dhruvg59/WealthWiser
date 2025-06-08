@@ -10,8 +10,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://wealth-wiser.vercel.app", 
-  credentials: true
+  origin: ['https://wealth-wiser.vercel.app', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 

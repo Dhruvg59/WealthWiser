@@ -28,19 +28,24 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 // });
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
-
+  
+  console.log('Login attempt received:', { email });
+  console.log('Environment variables loaded:', {
+    hasEmail: !!ADMIN_EMAIL,
+    hasPassword: !!ADMIN_PASSWORD,
+    hasSecret: !!SECRET_KEY
+  });
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    console.log('Credentials matched, generating token');
     const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: '1h' });
-   
-
+    console.log('Token generated successfully');
+    
     return res.json({ success: true, token });
   } else {
+    console.log('Login failed - Invalid credentials');
     return res.status(401).json({ success: false, message: 'Invalid credentials' });
-
   }
-  
-  
 });
 
 // Verify admin authentication

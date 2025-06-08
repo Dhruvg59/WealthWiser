@@ -10,21 +10,45 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);
 
-    // Simple validation
-    if (email === 'admin@gmail.com' && password === 'admin123') {
-      // Store a simple token
-      localStorage.setItem('token', 'admin-token');
-      // Redirect to dashboard
-      navigate('/admin/dashboard');
-    } else {
-      setError('Invalid email or password');
+    console.log('Login attempt with:', { email, password });
+
+    try {
+      console.log('Making request to:', 'https://wealthwiser.onrender.com/api/admin/login');
+      const response = await axios.post('https://wealthwiser.onrender.com/api/admin/login', {
+        email,
+        password,
+      });
+
+      console.log('Server response:', response.data);
+
+      if (response.data.success && response.data.token) {
+        console.log('Login successful, storing token');
+        // Store JWT token
+        localStorage.setItem('token', response.data.token);
+        console.log('Token stored, redirecting to dashboard');
+        // Redirect to dashboard
+        navigate('/admin/dashboard');
+      } else {
+        console.log('Invalid response from server:', response.data);
+        setError('Invalid response from server');
+      }
+    } catch (err) {
+      console.error('Login error:', err);
+      if (err.response && err.response.data) {
+        console.log('Error response:', err.response.data);
+        setError(err.response.data.message || 'Login failed');
+      } else {
+        console.log('Network or server error');
+        setError('Server error. Please try again later.');
+      }
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

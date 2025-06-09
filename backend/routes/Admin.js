@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 
 
-const SECRET_KEY =  process.env.JWT_SECRET;
+const SECRET_KEY = process.env.JWT_SECRET;
 
 // ✅ Use .env variables instead
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
@@ -30,11 +30,6 @@ router.post('/login', (req, res) => {
   const { email, password } = req.body;
   
   console.log('Login attempt received:', { email });
-  console.log('Environment variables loaded:', {
-    hasEmail: !!ADMIN_EMAIL,
-    hasPassword: !!ADMIN_PASSWORD,
-    hasSecret: !!SECRET_KEY
-  });
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
     console.log('Credentials matched, generating token');

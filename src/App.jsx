@@ -123,12 +123,12 @@ const AppContent = () => {
         } />
         <Route path="/card-loan" element={
           <ServiceDetails 
-            title="Card Loan"
+            title="Overdraft For Salaried"
             description="Apply for easy credit card loans."
             image={Salary}
             points={[
               "Instant Approval",
-              "Low Interest Rate",
+              "Attractive Interest rates starting @ 14%",
               "Flexible Repayment",
             ]}
             extraDetails={[
@@ -190,7 +190,7 @@ const AppContent = () => {
             image={PersonalLoan}
             points={[
               "Loan amount of up to 1 Crore",
-              "Attractive Interest rates starting @ 9%",
+              "Attractive Interest rates starting @ 10.5%",
               "Money in account with in 24 Hrs",
               "Compare and choose among 40+ Banks & NBFCs"
             ]}
@@ -313,7 +313,7 @@ const AppContent = () => {
             image={Buisness}
             points={[
               "Loan amount of up to 2 Crore",
-              "Attractive Interest rates starting @ 10%",
+              "Attractive Interest rates starting @ 15%",
               "No Collateral Required","Compare and choose among 30+ Banks & NBFCs"
             ]}
             extraDetails={[

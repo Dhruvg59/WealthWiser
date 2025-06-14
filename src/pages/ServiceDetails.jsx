@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ServiceDetails.css';
 
+
+
 const ServiceDetails = ({ title, description, points, image, extraDetails }) => {
   const [formData, setFormData] = useState({
     name: "",

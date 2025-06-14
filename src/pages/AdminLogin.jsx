@@ -15,16 +15,16 @@ const AdminLogin = () => {
     setError('');
     setLoading(true);
 
-    console.log('Login attempt with:', { email, password });
+    
 
     try {
-      console.log('Making request to:', 'https://wealthwiser.onrender.com/api/admin/login');
+      console.log('Attempting Login');
       const response = await axios.post('https://wealthwiser.onrender.com/api/admin/login', {
         email,
         password,
       });
 
-      console.log('Server response:', response.data);
+      console.log('Server response:');
 
       if (response.data.success && response.data.token) {
         console.log('Login successful, storing token');

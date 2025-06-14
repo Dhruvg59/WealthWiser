@@ -7,7 +7,7 @@ const verifyToken = require('../middleware/verifyToken');
 // Public route to submit form
 router.post('/', async (req, res) => {
   try {
-    console.log('Received form submission:', req.body);
+    // console.log('Received form submission:');
     
     // Validate required fields
     const requiredFields = ['name', 'email', 'phone', 'loanType', 'amount', 'message'];
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 
     const formData = new FormData(req.body);
     const savedData = await formData.save();
-    console.log('Form saved successfully:', savedData);
+    // console.log("Form saved successfully:");
     
     res.status(201).json({
       message: 'Form submitted successfully',

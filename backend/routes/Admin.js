@@ -13,33 +13,38 @@ const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 
-// Admin login route
-// router.post('/login', (req, res) => {
-//   console.log('Login attempt received:', req.body);
-//   const { email, password } = req.body;
 
-//   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-//     console.log('Login successful');
-//     res.json({ success: true });
-//   } else {
-//     console.log('Login failed - Invalid credentials');
-//     res.status(401).json({ success: false, message: 'Invalid credentials' });
-//   }
-// });
 router.post('/login', (req, res) => {
-  const { email, password } = req.body;
-  
-  console.log('Login attempt received:', { email });
-
-  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-    console.log('Credentials matched, generating token');
-    const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: '1h' });
-    console.log('Token generated successfully');
+  try {
+    const { email, password } = req.body;
     
-    return res.json({ success: true, token });
-  } else {
-    console.log('Login failed - Invalid credentials');
-    return res.status(401).json({ success: false, message: 'Invalid credentials' });
+    console.log('Login attempt received:',);
+
+    // Check if environment variables are set
+    if (!ADMIN_EMAIL || !ADMIN_PASSWORD || !SECRET_KEY) {
+      console.error('Missing environment variables');
+      return res.status(500).json({ 
+        success: false, 
+        message: 'Server configuration error' 
+      });
+    }
+
+    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+     
+      const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: '1h' });
+      console.log(' successfully');
+      
+      return res.json({ success: true, token });
+    } else {
+      console.log('Login failed - Invalid credentials');
+      return res.status(401).json({ success: false, message: 'Invalid credentials' });
+    }
+  } catch (error) {
+    console.error('Login error:', error);
+    return res.status(500).json({ 
+      success: false, 
+      message: 'Server error during login' 
+    });
   }
 });
 

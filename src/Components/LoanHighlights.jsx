@@ -76,6 +76,7 @@ const LoanHighlights = () => {
 
   const handleCardClick = (path) => {
     if (path) {
+      window.scrollTo(0, 0); // Scroll to top before navigation
       navigate(path);
     }
   };
